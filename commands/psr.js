@@ -14,7 +14,7 @@ exports.run = (config, client, message, args) => {
 	}else if(choice === 'rock'){ 
 		Pchoice = 2;
 	}else{ 
-		message.channel.send('You Misspelled!');
+		message.channel.send('You misspelt!');
 		return;
 	}
 	if(Bchoice == 0){
