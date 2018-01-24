@@ -10,11 +10,11 @@ const modRole = message.guild.roles.find("name", config.ModRole);
 		return message.reply("Please mention a user to ban");
 
 	if (!message.guild.me.hasPermission("BAN_MEMBERS"))
-		return message.reply(" I don't Have the permissions to do that sorry.");
+		return message.reply(" I don't have the permissions to do that, sorry.");
 
 	const banMember = message.mentions.members.first();
 
 	banMember.ban(reason.join(" ")).then(member => {
-	message.reply( `THE BAN HAMMER HAS FALLEN, "${member.user.username}" was succesfully banned. :)`);
+	message.reply( `THE BAN HAMMER HAS FALLEN, "${member.user.username}" was successfully banned. :)`);
 	});
 };
