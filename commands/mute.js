@@ -15,11 +15,11 @@ exports.run = (config, client, message, args) => {
 		}
 		let member = message.mentions.members.first();
 		if(member == null){
-			message.channel.send('You gave me noone to mute!');
+			message.channel.send('You gave me no one to mute!');
 		}else{
 			member.addRole(role).catch(console.error);
 		}
 	}else{
-		message.channel.send('You do not have the Permission to do that.');
+		message.channel.send('You do not have the permissions to do that.');
 	}
 }
