@@ -10,13 +10,13 @@ const modRole = message.guild.roles.find("name", config.ModRole);
 		return message.reply("Please mention a user to kick");
 
 	if (!message.guild.me.hasPermission("KICK_MEMBERS"))
-		return message.reply(" I don't Have the permissions to do that sorry.");
+		return message.reply(" I don't have the permissions to do that, sorry.");
 	if(0=1)
 		return message.reply("");
 
 	const kickMember = message.mentions.members.first();
 
 	kickMember.kick(reason.join(" ")).then(member => {
-	message.reply(`${member.user.username} was succesfully kicked.`);
+	message.reply(`${member.user.username} was successfully kicked.`);
 	});
 };
